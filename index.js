@@ -4,13 +4,13 @@ const app = express();
 const port = 3000;
 
 const options = {
-  host: '206.81.13.145',  // Reemplaza con la IP de tu Droplet en DigitalOcean
+  host: '206.81.13.145', //IP SERVIDOR
   port: 3050,
-  database:'/var/lib/firebird/3.0/data/DELFA BOS.FDB',  // Ruta a tu base de datos
+  database:'/var/lib/firebird/3.0/data/DELFA BOS.FDB', 
   user: 'SYSDBA',
-  password: 'masterkey',  // Reemplaza con la contraseña de SYSDBA
-  role: null,    // Puedes dejarlo como null si no usas roles
-  pageSize: 4096 // Ajusta según la configuración de tu base de datos
+  password: '',
+  role: null,
+  pageSize: 4096
 };
 
 app.get('/get-empleados', (req, res) => {
@@ -36,3 +36,4 @@ app.get('/get-empleados', (req, res) => {
 app.listen(port, () => {
   console.log(`Server running at http://138.197.17.205:${port}/`);
 });
+
